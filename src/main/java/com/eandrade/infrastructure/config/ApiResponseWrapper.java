@@ -1,6 +1,6 @@
-package com.eandrade.config;
+package com.eandrade.infrastructure.config;
 import com.eandrade.application.dto.ApiResponse;
-import com.eandrade.config.annotation.*;
+import com.eandrade.infrastructure.config.annotation.*;
 import org.jspecify.annotations.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.MethodParameter;

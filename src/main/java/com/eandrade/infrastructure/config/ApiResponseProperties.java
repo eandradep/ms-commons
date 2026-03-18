@@ -1,4 +1,4 @@
-package com.eandrade.config;
+package com.eandrade.infrastructure.config;
 
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;

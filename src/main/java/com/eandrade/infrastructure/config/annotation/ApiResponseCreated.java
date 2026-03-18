@@ -1,4 +1,4 @@
-package com.eandrade.config.annotation;
+package com.eandrade.infrastructure.config.annotation;
 
 
 import org.springframework.http.HttpStatus;

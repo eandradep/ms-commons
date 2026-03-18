@@ -1,4 +1,4 @@
-package com.eandrade.config;
+package com.eandrade.infrastructure.config;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;

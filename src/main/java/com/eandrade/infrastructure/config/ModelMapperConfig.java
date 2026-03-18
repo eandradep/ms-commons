@@ -1,4 +1,4 @@
-package com.eandrade.config;
+package com.eandrade.infrastructure.config;
 
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;

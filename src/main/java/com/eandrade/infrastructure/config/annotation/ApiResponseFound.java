@@ -1,4 +1,4 @@
-package com.eandrade.config.annotation;
+package com.eandrade.infrastructure.config.annotation;
 
 import org.springframework.http.HttpStatus;
 
@@ -7,8 +7,7 @@ import java.lang.annotation.*;
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface ApiResponseSuccess {
-    String message() default "Operación exitosa";
+public @interface ApiResponseFound {
+    String message() default "Datos encontrados exitosamente";
     HttpStatus status() default HttpStatus.OK;
 }
-
