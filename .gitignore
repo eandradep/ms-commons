@@ -1,0 +1,91 @@
+# ─── CREDENCIALES - NUNCA SUBIR ──────────────────────────────────
+gradle.properties
+.env
+*.token
+secrets.*
+
+# ─── GRADLE ──────────────────────────────────────────────────────
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# ─── SPRING BOOT ─────────────────────────────────────────────────
+target/
+*.jar
+*.war
+*.ear
+!gradle/wrapper/gradle-wrapper.jar
+HELP.md
+
+# ─── INTELLIJ IDEA ───────────────────────────────────────────────
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.idea_modules/
+atlassian-ide-plugin.xml
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+# ─── JAVA ────────────────────────────────────────────────────────
+*.class
+*.log
+*.ctxt
+.mtj.tmp/
+hs_err_pid*
+replay_pid*
+
+# ─── LOMBOK ──────────────────────────────────────────────────────
+lombok.config
+
+# ─── QUERYDSL ─────────────────────────────────────────────────────
+**/generated/
+**/generated-sources/
+src/main/generated/
+
+# ─── MAVEN (por si acaso) ────────────────────────────────────────
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# ─── SISTEMA OPERATIVO ───────────────────────────────────────────
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ─── DOCKER (por si en el futuro agregas) ────────────────────────
+docker-compose.override.yml
+.docker/
+
+# ─── LOGS ────────────────────────────────────────────────────────
+logs/
+*.log
+spring.log
