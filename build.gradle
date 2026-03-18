@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'com.eandrade'
-version = '1.0.0'
+version = '1.0.1'
 description = 'ms-commons'
 
 java {
@@ -79,8 +79,8 @@ publishing {
             name = 'GitHubPackages'
             url  = uri('https://maven.pkg.github.com/eandradep/ms-commons')
             credentials {
-                username = project.findProperty('gpr.user')
-                password = project.findProperty('gpr.token')
+                username = System.getenv('GITHUB_ACTOR') ?: project.findProperty('gpr.user')
+                password = System.getenv('GITHUB_TOKEN') ?: project.findProperty('gpr.token')
             }
         }
     }
