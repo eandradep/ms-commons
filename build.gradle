@@ -86,7 +86,7 @@ publishing {
         }
     }
 }
-
+// com.github.eandradep/ms-commons
 tasks.named('test') {
     useJUnitPlatform()
 }
