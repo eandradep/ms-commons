@@ -1,7 +1,7 @@
 package com.eandrade.infrastructure.config;
 import com.eandrade.application.dto.ApiResponse;
 import com.eandrade.infrastructure.config.annotation.*;
-import org.jspecify.annotations.NonNull;
+import org.springframework.lang.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
