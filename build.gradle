@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'com.github.eandradep'
-version = '1.0.7'
+version = '1.0.9'
 description = 'ms-commons'
 
 java {
