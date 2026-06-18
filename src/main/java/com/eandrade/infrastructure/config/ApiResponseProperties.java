@@ -16,7 +16,7 @@ public class ApiResponseProperties {
 
     public List<String> getBasePackages() {
         if (basePackages.isEmpty()) {
-            return List.of("com.sofka.ms.clients.infrastructure.web");
+            return List.of("com");
         }
         return basePackages;
     }
