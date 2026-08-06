@@ -31,7 +31,9 @@ public abstract class BaseEntity {
     protected void onPrePersist() {
         this.createdBy = AuditUtil.getCurrentUser();
         this.createdAt = LocalDateTime.now();
-        this.status    = true;
+        if (this.status == null) {
+            this.status = true;
+        }
     }
 
     @PreUpdate

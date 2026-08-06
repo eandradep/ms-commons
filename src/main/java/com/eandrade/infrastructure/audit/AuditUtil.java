@@ -17,9 +17,18 @@ public class AuditUtil {
 
         if (authentication.getPrincipal() instanceof Jwt jwt) {
             String username = jwt.getClaimAsString("preferred_username");
-            return username != null ? username : jwt.getSubject();
+            return firstNonBlank(username, jwt.getSubject());
         }
 
-        return authentication.getName();
+        return firstNonBlank(authentication.getName());
+    }
+
+    private static String firstNonBlank(String... values) {
+        for (String value : values) {
+            if (value != null && !value.isBlank()) {
+                return value;
+            }
+        }
+        return "system";
     }
 }

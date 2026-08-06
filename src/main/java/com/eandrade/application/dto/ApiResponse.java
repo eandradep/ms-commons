@@ -58,6 +58,10 @@ public class ApiResponse<T> {
     }
 
     public static <T> ApiResponse<T> error(String code, String message, String details) {
+        return errorWithDetails(code, message, details);
+    }
+
+    public static <T> ApiResponse<T> errorWithDetails(String code, String message, Object details) {
         return ApiResponse.<T>builder()
                 .code(code)
                 .error(ErrorDetail.builder()
@@ -66,15 +70,15 @@ public class ApiResponse<T> {
                         .build())
                 .build();
     }
-}
 
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-@JsonInclude(JsonInclude.Include.NON_NULL)
-class ErrorDetail {
-    private String message;
-    private String details;
-    private String suggestion;
+    @Data
+    @Builder
+    @NoArgsConstructor
+    @AllArgsConstructor
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public static class ErrorDetail {
+        private String message;
+        private Object details;
+        private String suggestion;
+    }
 }

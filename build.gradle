@@ -37,6 +37,8 @@ dependencies {
 
     compileOnly 'org.projectlombok:lombok:1.18.36'
     annotationProcessor 'org.projectlombok:lombok:1.18.36'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 // ── JAR config ────────────────────────────────────────────────────────────────
@@ -65,10 +67,7 @@ jar {
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            // Usar artifact explícito en vez de components.java
-            // para garantizar que se suba el jar correcto con las clases
-            artifact tasks.jar
-            artifact tasks.sourcesJar
+            from components.java
 
             groupId    = 'com.github.eandradep'
             artifactId = 'ms-commons'
@@ -77,21 +76,6 @@ publishing {
             pom {
                 name        = 'ms-commons'
                 description = 'Microservices Commons Library'
-
-                // Declarar dependencias transitivas en el POM manualmente
-                // para que el consumidor las resuelva correctamente
-                withXml {
-                    def deps = asNode().appendNode('dependencies')
-                    configurations.api.dependencies.each { dep ->
-                        if (dep.group && dep.name && dep.version) {
-                            def node = deps.appendNode('dependency')
-                            node.appendNode('groupId',    dep.group)
-                            node.appendNode('artifactId', dep.name)
-                            node.appendNode('version',    dep.version)
-                            node.appendNode('scope',      'compile')
-                        }
-                    }
-                }
             }
         }
     }
